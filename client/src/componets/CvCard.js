@@ -5,6 +5,7 @@ import rp from 'request-promise';
 function CVCard(props) {
   const {aprob, buttons} = props;  
   const [cvs, setCvs] = useState([]); 
+  const [id, setId] = useState(""); 
 
   useEffect(() => {
       setCvs([]);
@@ -16,7 +17,7 @@ function CVCard(props) {
           setCvs(response)
       }).catch(err => console.log(err.message));
 
-  },[])
+  },[id]) ///////////////
 
   const accept= async (e,id) => {
     e.preventDefault()
@@ -26,7 +27,7 @@ function CVCard(props) {
         json: true,
     };
     rp.put(options).then(response => {
-      document.getElementById(id).remove();
+      setId(id) /////////////////
     }).catch(err => console.log(err.message));
   }
 
@@ -38,7 +39,7 @@ function CVCard(props) {
         json: true,
     };
     rp.delete(options).then(response => {
-      document.getElementById(id).remove()
+      setId(id)
     }).catch(err => console.log(err.message));
   } 
 

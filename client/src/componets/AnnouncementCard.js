@@ -5,6 +5,7 @@ import rp from 'request-promise';
 function AnnouncementCard(props) {
   const {aprob, buttons} = props;  
   const [puestos, setPuestos] = useState([]);
+  const [id, setId] = useState(""); 
 
     useEffect(() => {
         setPuestos([]);
@@ -17,7 +18,7 @@ function AnnouncementCard(props) {
             setPuestos(response)
         }).catch(err => console.log(err.message));
 
-    },[])
+    },[id])
 
 
     const accept= async (e,id) => {
@@ -28,7 +29,7 @@ function AnnouncementCard(props) {
           json: true,
       };
       rp.put(options).then(response => {
-        document.getElementById(id).remove();
+        setId(id)
       }).catch(err => console.log(err.message));
     }
   
@@ -40,6 +41,7 @@ function AnnouncementCard(props) {
           json: true,
       };
       rp.delete(options).then(response => {
+        setId(id)
       }).catch(err => console.log(err.message));
     }
 

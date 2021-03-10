@@ -103,7 +103,6 @@ app.put("/empresas/:id", async (req, res) => {
 //get all alumnos
 app.get("/alumnos/:aprob", async(req, res) => {
     const {aprob} = req.params;
-    console.log(req)
     try{
         const alumnos = await pool.query(
             "SELECT * FROM alumnos where aprobado = $1",
