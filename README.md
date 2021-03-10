@@ -2,9 +2,9 @@
 
 ## Download
 ### Clonar el repo
-
+```
  git clone https://github.com/AntonellaDatri/Bolsa-de-trabajo.git
-
+```
 
 ### Levantar el servidor
 
