@@ -13,6 +13,8 @@ const [nacimiento, setNacimiento] =useState("");
 const [carrera, setCarrera] =useState("");
 const [año, setAño] =useState("");
 const [experiencia, setExperiencia] =useState("");
+const [error, setError] =useState(false);
+
 
 
 
@@ -52,7 +54,10 @@ const onSubmitForm = async e => {
     };
     rp.post(options).then(response => {
         window.location.href ="/SuccesfullyForm";
-    }).catch(err => console.log(err.message));
+    }).catch(err => {
+        console.log(err)
+        setError(true)
+    });
 }
 
     return (
@@ -62,7 +67,7 @@ const onSubmitForm = async e => {
             <form className="needs-validation container" onSubmit={onSubmitForm} noValidate>
                 <FormControl.FormInput label = "Nombre" invalidMessage = "Pon tu nombre aqui" onChange = { ev => setNombre( ev.target.value) } type ="text"  />
                 <FormControl.FormInput label = "Apellido" invalidMessage = "Pon tu apellido aqui" onChange = { ev => setApellido( ev.target.value) }  type ="text" />
-                <FormControl.FormInput label = "Email" invalidMessage = "Debes proporcionar un email" onChange = { ev => setEmail( ev.target.value) }  type ="email" />
+                <FormControl.FormInput label = "Email" invalidMessage = "Debes proporcionar un email valido" onChange = { ev => setEmail( ev.target.value) }  type ="email" />
             
                 <div className = "row g-2">  
                     <label className="form-label">Documento</label>
@@ -71,7 +76,7 @@ const onSubmitForm = async e => {
                         <FormControl.Select option = "Tipo" invalidMessage = "Selecciona un tipo de documento" options ={["DNI", "CI"]} onChange = { ev => setTipoDoc( ev.target.value) }  type ="text" /> 
                     </div>
                     <div className="mb-3 col-md">
-                        <FormControl.inputGroup invalidMessage = "Proporciona un numero de documento" simbol ="#" onChange = { ev => setNumDoc( ev.target.value) }  type ="number" />
+                        <FormControl.inputGroup invalidMessage = "Proporciona un numero de documento valido" simbol ="#" onChange = { ev => setNumDoc( ev.target.value) }  type ="number" />
                     </div>
                 </div>
 
@@ -87,11 +92,15 @@ const onSubmitForm = async e => {
                 </div>
                 
                 <FormControl.TextareaInbox label ="Cuentanos sobre ti" invalidMessage ="Debes poner aqui tu experiencia laboral" onChange = { ev => setExperiencia( ev.target.value) }  type ="text" />
-
+                {error && 
+                    <p className = "fs-6 text-danger container-fluid ">Lo sentimos hubo un error al cargar los datos. Por favor revise que este todo correcto e intentelo de nuevo </p>
+                }
                 <div className="col-12 mb-3">
                     <button className="btn btn-primary" type="submit">Enviar</button>
                 </div>
+                
             </form>
+            
 
         </div>
 

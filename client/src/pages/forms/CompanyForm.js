@@ -15,6 +15,7 @@ function CompanyForm() {
     const [inicioDeLaConv, setInicioDeLaConv] =useState("");
     const [finDeLAConv, setFinDeLAConv] =useState("");
     const [descpPuesto, setDescpPuesto] =useState("");
+    const [error, setError] =useState(false);
 
 
     
@@ -48,7 +49,7 @@ const onSubmitForm = async e => {
         window.location.href ="/SuccesfullyForm";
     }).catch(err => {
         console.log(err.message)
-        verifyFields()
+        setError(true)
     });
 }
 
@@ -76,7 +77,9 @@ const onSubmitForm = async e => {
                 </div>
 
                 <FormControl.TextareaInbox label ="Descripcion del puesto" invalidMessage ="Debes poner una descripcion del puesto" onChange = { ev => setDescpPuesto( ev.target.value) } type = "text"/>
-
+                {error && 
+                    <p className = "fs-6 text-danger container-fluid ">Lo sentimos hubo un error al cargar los datos. Por favor revise que este todo correcto e intentelo de nuevo </p>
+                }
                 <div className="col-12 mb-3">
                     <button className="btn btn-primary" type="submit">Enviar</button>
                 </div>
