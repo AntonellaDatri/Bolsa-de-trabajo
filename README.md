@@ -28,3 +28,12 @@ npm install
 
 npm start 
 ```
+### Usuarios de prueba como administrador
+
+```
+usuario :'admin' contraseña : 'admin'
+
+usuario :'admin2' contraseña : 'admin2'
+
+usuario :'admin3' contraseña : 'admin3'
+```
