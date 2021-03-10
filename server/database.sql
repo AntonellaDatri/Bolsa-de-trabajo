@@ -71,17 +71,19 @@ VALUES('Gonzalo','Camarota',123546789,'DNI','1995-10-10','gonzalocamarota@mail.c
 
 ---Empresas Aprobadas
 INSERT INTO empresas (nombre,cuit,provincia,localidad,direccion,telefono,mail,inicioDeLaConv,finDeLAConv,descpPuesto,aprobado)
-VALUES("Sancor",12345678912,"Buenos Aires","Tigre","calle falsa 123",1123456789,"sancor@mail.com",'2021-3-10','2021-5-16',"Abrimos la convocatoria de ...",true),
-VALUES("Estudio Juridico A&M",12345678912,"Buenos Aires","C.A.B.A","calle falsa 123",1123456789,"estudiojuridicoA&M@mail.com",'2021-3-2','2021-5-24',"Abrimos la convocatoria de ...",true),
-VALUES("Arcor",12345678912,"Entre Rios","La Paz","calle falsa 123",1123456789,"arcor@mail.com",'2023-12-16','2021-3-16',"Abrimos la convocatoria de ...",true),
-VALUES("Inmobiliaria Hernan Gomez",12345678912,"Tucuman","Yerba Buena","calle falsa 123",1123456789,"inmmobiliariagomez@mail.com",'2020-11-3','2021-6-3',"Abrimos la convocatoria de ...",true),
-VALUES("Easy",12345678912,"Buenos Aires","Quilmes","calle falsa 123",1123456789,"easy@mail.com",'2020-9-10','2021-3-22',"Abrimos la convocatoria de ...",true),
-VALUES("Estudio Fotografico Amalia",12345678912,"Cordoba","Cordoba Capital","calle falsa 123",1123456789,"fotografiaAmalia@mail.com",'2020-3-24','2021-6-24',"Abrimos la convocatoria de ...",true);
+VALUES
+('Sancor',12345678912,'Buenos Aires','Tigre','calle falsa 123',1123456789,'sancor@mail.com','2021-3-10','2021-5-16','Abrimos la convocatoria de ...',true),
+('Estudio Juridico A&M',12345678912,'Buenos Aires','C.A.B.A','calle falsa 123',1123456789,'estudiojuridicoA&M@mail.com','2021-3-2','2021-5-24','Abrimos la convocatoria de ...',true),
+('Arcor',12345678912,'Entre Rios','La Paz','calle falsa 123',1123456789,'arcor@mail.com','2023-12-16','2021-3-16','Abrimos la convocatoria de ...',true),
+('Inmobiliaria Hernan Gomez',12345678912,'Tucuman','Yerba Buena','calle falsa 123',1123456789,'inmmobiliariagomez@mail.com','2020-11-3','2021-6-3','Abrimos la convocatoria de ...',true),
+('Easy',12345678912,'Buenos Aires','Quilmes','calle falsa 123',1123456789,'easy@mail.com','2020-9-10','2021-3-22','Abrimos la convocatoria de ...',true),
+('Estudio Fotografico Amalia',12345678912,'Cordoba','Cordoba Capital','calle falsa 123',1123456789,'fotografiaAmalia@mail.com','2020-3-24','2021-6-24','Abrimos la convocatoria de ...',true);
 
 ---Empresas en estado borrador
 INSERT INTO empresas (nombre,cuit,provincia,localidad,direccion,telefono,mail,inicioDeLaConv,finDeLAConv,descpPuesto,aprobado)
-VALUES("CBSé",12345678912,"Buenos Aires","C.A.B.A.","calle falsa 123",1123456789,"cbsé@mail.com",'2021-3-10','2021-5-16',"Abrimos la convocatoria de ...",false),
-VALUES("Pasteleria La Nueva",12345678912,"Tucuman","SanMiguel de Tucuman","calle falsa 123",1123456789,"pastelerialanueva@mail.com",'2021-3-2','2021-5-24',"Abrimos la convocatoria de ...",false),
-VALUES("Marolio",12345678912,"Entre Rios","La Paz","calle falsa 123",1123456789,"marolio@mail.com",'2023-12-16','2021-3-16',"Abrimos la convocatoria de ...",false),
-VALUES("Garbarino",12345678912,"Tucuman","Yerba Buena","calle falsa 123",1123456789,"inmmobiliariagomez@mail.com",'2020-11-3','2021-6-3',"Abrimos la convocatoria de ...",false),
-VALUES("Jumbo",12345678912,"Buenos Aires","Quilmes","calle falsa 123",1123456789,"easy@mail.com",'2020-9-10','2021-3-22',"Abrimos la convocatoria de ...",false),
+VALUES
+('CBSé',12345678,'Buenos Aires','C.A.B.A.','calle falsa 123',1123456789,'cbsé@mail.com','2021-3-10','2021-5-16','Abrimos la convocatoria de ...',false),
+('Pasteleria La Nueva',12345678,'Tucuman','SanMiguel de Tucuman','calle falsa 123',1123456789,'pastelerialanueva@mail.com','2021-3-2','2021-5-24','Abrimos la convocatoria de ...',false),
+('Marolio',12345678,'Entre Rios','La Paz','calle falsa 123',1123456789,'marolio@mail.com','2023-12-16','2021-3-16','Abrimos la convocatoria de ...',false),
+('Garbarino',12345678,'Tucuman','Yerba Buena','calle falsa 123',1123456789,'inmmobiliariagomez@mail.com','2020-11-3','2021-6-3','Abrimos la convocatoria de ...',false),
+('Jumbo',12345678,'Buenos Aires','Quilmes','calle falsa 123',1123456789,'easy@mail.com','2020-9-10','2021-3-22','Abrimos la convocatoria de ...',false);
