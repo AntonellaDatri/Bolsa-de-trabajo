@@ -42,7 +42,7 @@ CREATE Table users(
 ------DML
 
 ---usuarios de prueba
-INSERT INTO alumnos (userid, password) 
+INSERT INTO users (userid, password) 
 VALUES
 ('admin','admin')
 ('admin2','admin2'),
