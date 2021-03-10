@@ -44,7 +44,7 @@ CREATE Table users(
 ---usuarios de prueba
 INSERT INTO users (userid, password) 
 VALUES
-('admin','admin')
+('admin','admin'),
 ('admin2','admin2'),
 ('admin3','admin3');
 
